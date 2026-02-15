@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:20'
-        }
-    }
+    agent any
 
     stages {
 
@@ -24,5 +20,6 @@ pipeline {
                 sh 'npm test'
             }
         }
+
     }
 }
